@@ -6,18 +6,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerLoginEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class SomeAwesomeEvent implements Listener {
 
-	@EventHandler(priority = EventPriority.LOW)
-	public void onPlayerLogin(PlayerLoginEvent event) {
+	@EventHandler(priority = EventPriority.HIGH)
+	public void onPlayerLogin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		
 		if (player.hasPlayedBefore()){
-			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Welcome back" + player.getDisplayName());
+			
+			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server] Welcome back " + player.getDisplayName());
 		} else{
-			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Welcome" + player.getDisplayName() + "to SomeAwesomeMC.Com");
+			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server] Welcome " + player.getDisplayName() + " to SomeAwesomeMC.Com");
 		}
 	}
 }

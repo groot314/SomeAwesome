@@ -16,9 +16,10 @@ public class SomeAwesomeCMD implements CommandExecutor{
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String lable,
-			String[] arg3) {
+			String[] args) {
 		if (cmd.getName().equalsIgnoreCase("someawesome")) {
 			sender.sendMessage("HI!");
+			return true;
 		}
 		
 		return false;

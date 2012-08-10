@@ -2,6 +2,6 @@ name: SomeAwesome
 main: me.groot314.SomeAwesome.SomeAwesome
 version: 1.0
 commands:
-  trolling:
+  someawesome:
     description: SomeAwesome
     usage: /SomeAwesome

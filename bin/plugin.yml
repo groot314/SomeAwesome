@@ -1,0 +1,7 @@
+name: SomeAwesome
+main: me.groot314.SomeAwesome.SomeAwesome
+version: 1.0
+commands:
+  someawesome:
+    description: SomeAwesome
+    usage: /SomeAwesome

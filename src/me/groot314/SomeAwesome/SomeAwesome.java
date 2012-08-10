@@ -3,11 +3,14 @@ package me.groot314.SomeAwesome;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SomeAwesome extends JavaPlugin{
-
-	private SomeAwesomeCMD SomeAwesomeExecutor;
+	
+	private SomeAwesomeCMD Executor;
 	@Override
 	public void onEnable() {
-		getCommand("SomeAwesome").setExecutor(SomeAwesomeExecutor);
+		getServer().getPluginManager().registerEvents(new SomeAwesomeEvent(), this);
+		
+		Executor = new SomeAwesomeCMD(this);
+		getCommand("SomeAwesome").setExecutor(Executor);
 	}
 	
 	@Override
