@@ -15,9 +15,9 @@ public class SomeAwesomeEvent implements Listener {
 		Player player = event.getPlayer();
 		
 		if (player.hasPlayedBefore()){
-			
 			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server] Welcome back " + player.getDisplayName());
-		} else{
+		} 
+		else{
 			Bukkit.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server] Welcome " + player.getDisplayName() + " to SomeAwesomeMC.Com");
 		}
 	}
